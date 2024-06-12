@@ -1,22 +1,10 @@
 import {defineConfig} from 'vite'
 import react from '@vitejs/plugin-react'
-import typescript from "@rollup/plugin-typescript";
+import dts from 'vite-plugin-dts'
 // https://vitejs.dev/config/
-import path from 'path'
-
-function resolve(str: string) {
-    return path.resolve(__dirname, str);
-}
 
 export default defineConfig({
-    plugins: [react(), typescript({
-        target: 'es5',
-        rootDir: resolve('packages/'),
-        declaration: true,
-        declarationDir: resolve('lib'),
-        exclude: resolve('node_modules/**'),
-        allowSyntheticDefaultImports: true,
-    }),],
+    plugins: [react(), dts({ include: ['packages'] }),],
     build: {
         // 打包输出的目录
         outDir: 'lib',

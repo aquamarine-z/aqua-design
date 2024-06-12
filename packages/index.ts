@@ -1,2 +1,2 @@
-import {AquaFlex} from "./AquaFlex/AquaFlex";
-export {AquaFlex}
+
+export { default as AquaFlex } from './AquaFlex';
