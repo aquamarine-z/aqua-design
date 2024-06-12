@@ -24,7 +24,7 @@
 
   },
   "include": [
-    "example"
+    "packages"
   ],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

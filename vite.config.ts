@@ -29,6 +29,7 @@ export default defineConfig({
             name: 'aqua-ui',
             // 文件名称, 打包结果举例: my-packages.umd.cjs
             fileName: 'aqua-ui',
+
         },
         rollupOptions: {
             // 确保外部化处理那些你不想打包进库的依赖
