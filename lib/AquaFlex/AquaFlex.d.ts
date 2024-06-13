@@ -10,5 +10,6 @@ export declare namespace AquaFlex {
         flexDirection: string;
         justifyContent: string;
         alignItems: string;
+        children: never[];
     };
 }

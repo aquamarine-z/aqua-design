@@ -18,5 +18,6 @@ export function AquaFlex(props:{
 AquaFlex.defaultProps = {
     flexDirection: "row",
     justifyContent: "flex-start",
-    alignItems: "flex-start"
+    alignItems: "flex-start",
+    children: []
 }
