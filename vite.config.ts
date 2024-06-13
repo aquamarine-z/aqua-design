@@ -6,10 +6,19 @@ import dts from 'vite-plugin-dts'
 export default defineConfig({
     plugins: [react(), dts({ include: ['packages'] }),],
     css:{
-        modules:{
-            scopeBehaviour: "local",
-            generateScopedName: "[name]_[local]__[hash:base64:5]",
-        }
+
+        //* css模块化
+        modules: { // css模块化 文件以.module.[css|less|scss]结尾
+            generateScopedName: '[name]__[local]___[hash:base64:5]',
+            hashPrefix: 'prefix',
+        },
+        //* 预编译支持less
+        preprocessorOptions: {
+            less: {
+                // 支持内联 JavaScript
+                javascriptEnabled: true,
+            },
+        },
     },
     build: {
         // 打包输出的目录
