@@ -5,6 +5,12 @@ import dts from 'vite-plugin-dts'
 
 export default defineConfig({
     plugins: [react(), dts({ include: ['packages'] }),],
+    css:{
+        modules:{
+            scopeBehaviour: "local",
+            generateScopedName: "[name]_[local]__[hash:base64:5]",
+        }
+    },
     build: {
         // 打包输出的目录
         outDir: 'lib',

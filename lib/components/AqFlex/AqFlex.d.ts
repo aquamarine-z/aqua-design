@@ -1,11 +1,13 @@
-import React from "react";
-export declare function AquaFlex(props: {
-    children: React.ReactNode[];
+import { default as React } from 'react';
+
+export interface AqFlexProps {
+    children: React.ReactNode[] | React.ReactNode;
     flexDirection?: "row" | "column";
     justifyContent?: "flex-start" | "flex-end" | "center" | "space-between" | "space-around" | "space-evenly";
     alignItems?: "flex-start" | "flex-end" | "center" | "stretch" | "baseline";
-}): import("react/jsx-runtime").JSX.Element;
-export declare namespace AquaFlex {
+}
+export declare function AqFlex(props: AqFlexProps): import("react/jsx-runtime").JSX.Element;
+export declare namespace AqFlex {
     var defaultProps: {
         flexDirection: string;
         justifyContent: string;
