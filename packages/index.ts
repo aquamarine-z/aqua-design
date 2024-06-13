@@ -1,2 +1,6 @@
-export {default as AqFlex} from "./components/AqFlex"
-export {default as AqColumn} from "./components/AqColumn"
+import AqFlex from "./components/AqFlex"
+import AqColumn from "./components/AqColumn";
+export default {
+    AqFlex,
+    AqColumn
+}
