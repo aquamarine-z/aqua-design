@@ -1,3 +1,4 @@
 import AqFlex from "./AqFlex";
 import AqColumn from "./AqColumn";
-export { AqFlex, AqColumn };
+import AqRow from "./AqRow";
+export { AqFlex, AqColumn, AqRow };

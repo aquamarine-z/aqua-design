@@ -5,6 +5,9 @@ export interface AqFlexProps {
     justifyContent?: "flex-start" | "flex-end" | "center" | "space-between" | "space-around" | "space-evenly";
     alignItems?: "flex-start" | "flex-end" | "center" | "stretch" | "baseline";
 }
+/***
+
+ ***/
 export declare function AqFlex(props: AqFlexProps): import("react/jsx-runtime").JSX.Element;
 export declare namespace AqFlex {
     var defaultProps: {
@@ -14,4 +17,3 @@ export declare namespace AqFlex {
         children: never[];
     };
 }
-export default AqFlex;

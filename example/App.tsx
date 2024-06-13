@@ -1,12 +1,13 @@
-import {AqColumn} from "../lib/components";
-
+import {AqColumn, AqRow} from "../lib/components";
 
 function App() {
 
   return (
     <>
       <AqColumn>
-          <h1>111</h1>
+        <AqRow>
+          <h1>12131231</h1>
+        </AqRow>
       </AqColumn>
     </>
   )

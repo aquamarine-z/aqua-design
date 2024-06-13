@@ -10,6 +10,9 @@ export interface AqFlexProps{
     alignItems?: "flex-start" | "flex-end" | "center" | "stretch" | "baseline"
 
 }
+/***
+
+ ***/
 export function AqFlex(props:AqFlexProps){
     return <div style={{
         display: "flex",
@@ -28,4 +31,3 @@ AqFlex.defaultProps = {
     alignItems: "flex-start",
     children: []
 }
-export default AqFlex
