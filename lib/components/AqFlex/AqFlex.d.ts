@@ -1,5 +1,4 @@
-import { default as React } from 'react';
-
+import React from "react";
 export interface AqFlexProps {
     children: React.ReactNode[] | React.ReactNode;
     flexDirection?: "row" | "column";
