@@ -1,5 +1,4 @@
-
-import AqColumn from "../packages/components/AqColumn";
+import {AqColumn} from "../lib/components/AqColumn/AqColumn";
 
 
 function App() {

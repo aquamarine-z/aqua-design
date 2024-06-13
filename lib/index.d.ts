@@ -1,8 +1,9 @@
-import { default as AqFlex } from './components/AqFlex';
-import { default as AqColumn } from './components/AqColumn';
-
 declare const _default: {
-    AqFlex: typeof AqFlex;
-    AqColumn: typeof AqColumn;
+    AqFlex: {
+        AqFlex: typeof import('./components/AqFlex/AqFlex').AqFlex;
+    };
+    AqColumn: {
+        AqColumn: typeof import('./components/AqColumn/AqColumn').AqColumn;
+    };
 };
 export default _default;

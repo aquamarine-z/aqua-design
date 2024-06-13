@@ -1,3 +1,3 @@
 import {AqFlex} from "./AqFlex.tsx";
 
-export default AqFlex
+export default {AqFlex}
