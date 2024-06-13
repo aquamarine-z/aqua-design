@@ -1,6 +1,7 @@
-import AqFlex from "./components/AqFlex";
-import AqColumn from "./components/AqColumn";
+import {AqFlex}from "./components/AqFlex/AqFlex.tsx";
+import {AqColumn} from "./components/AqColumn/AqColumn.tsx";
 export default {
     AqFlex,
-    AqColumn
+    AqColumn,
+
 }
