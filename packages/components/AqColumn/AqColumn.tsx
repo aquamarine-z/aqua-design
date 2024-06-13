@@ -10,3 +10,4 @@ export function AqColumn(props:AqColumnProps)
 {
     return <div className={styles.aq_column}>{props.children}</div>
 }
+export default AqColumn

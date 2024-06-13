@@ -28,3 +28,4 @@ AqFlex.defaultProps = {
     alignItems: "flex-start",
     children: []
 }
+export default AqFlex

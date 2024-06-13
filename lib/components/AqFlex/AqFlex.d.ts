@@ -15,3 +15,4 @@ export declare namespace AqFlex {
         children: never[];
     };
 }
+export default AqFlex;
