@@ -1,4 +1,4 @@
-import AqColumn from "../lib/components/AqColumn/AqColumn";
+import {AqColumn} from "../lib";
 
 
 function App() {

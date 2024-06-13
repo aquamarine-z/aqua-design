@@ -1,5 +1,6 @@
-export {default as AqColumn} from './components/AqColumn'
-
+import AqColumn from './components/AqColumn'
+import AqFlex from "./components/AqFlex"
+export {AqColumn,AqFlex}
 export type {AqColumnProps} from './components/AqColumn'
-export {default as AqFlex} from "./components/AqFlex"
+
 export type {AqFlexProps} from './components/AqFlex'
