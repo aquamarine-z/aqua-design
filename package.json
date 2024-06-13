@@ -12,7 +12,8 @@
   "exports": {
     ".": {
       "import": "./lib/aqua-ui.js",
-      "require": "./lib/aqua-ui.umd.cjs"
+      "require": "./lib/aqua-ui.umd.cjs",
+      "types": "./lib/index.d.ts"
     }
   },
   "scripts": {
