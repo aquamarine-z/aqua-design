@@ -1,10 +1,11 @@
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-expect-error
 import styles from "./Glass.module.less"
-import AqGlassTheme from "../../../packages/themes/AqGlassTheme";
+
 import AqDraggable from "../../../packages/components/AqDraggable";
 import AqColumn from "../../../packages/components/AqColumn";
 import {useEffect} from "react";
+import {AqGlassTheme} from "../../../lib/index";
 
 
 export function Glass() {
