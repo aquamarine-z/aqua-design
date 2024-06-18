@@ -26,6 +26,7 @@ export function Glass() {
                                 <h6>Glass Theme状态下的六级标题</h6>
                                 <p>Glass Theme状态下的段落</p>
                                 <button>Glass Theme状态下的按钮</button>
+                                <a>Glass Theme状态下的链接</a>
                             </AqColumn>
                         </div>
                 </AqGlassTheme>

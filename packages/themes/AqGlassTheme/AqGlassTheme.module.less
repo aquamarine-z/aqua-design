@@ -104,4 +104,22 @@ div.aq_glass_theme{
             cursor: pointer;
         }
     }
+    a{
+        transition: 0.25s ease-in-out;
+        text-decoration: underline;
+        color:#00000066;
+        &:hover{
+            color:#33333366;
+            text-decoration: underline;
+            cursor: pointer;
+            transform: scale(1.05);
+        }
+        &:active{
+            color:#33333366;
+            transform: scale(0.95);
+        }
+        &:visited{
+            color:#00000088;
+        }
+    }
 }
