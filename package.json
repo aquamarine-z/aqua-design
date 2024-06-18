@@ -1,7 +1,7 @@
 {
   "name": "aqua-ui",
   "private": false,
-  "version": "1.0.25",
+  "version": "1.0.26",
   "type": "module",
   "files": [
     "lib"
@@ -11,9 +11,11 @@
   "typings": "./lib/index.d.ts",
   "exports": {
     ".": {
-      "import": ["./lib/aqua-ui.js","./lib/style.css"],
+      "import": [
+        "./lib/aqua-ui.js",
+        "./lib/style.css"
+      ],
       "require": "./lib/aqua-ui.umd.cjs",
-
       "types": "./lib/index.d.ts"
     }
   },
