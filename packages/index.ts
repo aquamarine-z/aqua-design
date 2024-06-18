@@ -3,4 +3,7 @@ export {AqColumn,AqFlex,AqRow,AqModalDialog,AqDraggable}
 
 import {AqGlassTheme} from "./themes";
 export {AqGlassTheme}
-import "./style.css"
+
+const req = import.meta.glob("./*/*.less")
+
+export default req;

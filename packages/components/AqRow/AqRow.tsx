@@ -1,6 +1,4 @@
 
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-expect-error
 import styles from "./AqRow.module.less"
 import React from "react";
 export interface AqRowProps{

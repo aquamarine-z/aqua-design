@@ -1,7 +1,6 @@
 import React from "react";
 
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-expect-error
+
 import styles from "./AqFlex.module.less"
 export interface AqFlexProps{
     children: React.ReactNode[]|React.ReactNode,

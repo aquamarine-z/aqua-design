@@ -38,7 +38,7 @@ export default defineConfig({
         cssTarget: 'chrome61',
         lib: {
             // 组件库源码的入口文件
-            entry: 'packages/Index.ts',
+            entry: 'packages/index.ts',
             // 组件库名称
             name: 'aqua-ui',
             // 文件名称, 打包结果举例: my-packages.umd.cjs

@@ -23,6 +23,8 @@
     "noFallthroughCasesInSwitch": true,
     "allowJs": false,
 
+    "types": ["vite/client"]
+
   },
   "include": [
     "packages"

@@ -1,5 +1,4 @@
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-expect-error
+
 import styles from "./AqDraggable.module.less"
 import React, {createRef, RefObject, useState} from "react";
 

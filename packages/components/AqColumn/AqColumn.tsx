@@ -1,6 +1,5 @@
 import React from "react";
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-expect-error
+
 import styles from "./AqColumn.module.less"
 export interface AqColumnProps{
     children?: React.ReactNode[] | React.ReactNode | null,

@@ -1,6 +1,4 @@
 
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-expect-error
 import styles from "./AqModalDialog.module.less"
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 import React from "react";
