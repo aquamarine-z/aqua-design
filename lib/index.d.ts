@@ -2,5 +2,6 @@ import { AqColumn, AqFlex, AqRow, AqModalDialog, AqDraggable } from "./component
 export { AqColumn, AqFlex, AqRow, AqModalDialog, AqDraggable };
 import { AqGlassTheme } from "./themes";
 export { AqGlassTheme };
-declare const req: Record<string, unknown>;
-export default req;
+declare const less: Record<string, unknown>;
+declare const css: Record<string, unknown>;
+export { less, css };

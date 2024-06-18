@@ -4,6 +4,8 @@ export {AqColumn,AqFlex,AqRow,AqModalDialog,AqDraggable}
 import {AqGlassTheme} from "./themes";
 export {AqGlassTheme}
 
-const req = import.meta.glob("./**/*.less",{eager:true})
-
-export default req;
+const less = import.meta.glob("./**/*.less",{eager:true})
+const css =import.meta.glob("./style.css",{eager:true})
+export {
+    less,css
+}
