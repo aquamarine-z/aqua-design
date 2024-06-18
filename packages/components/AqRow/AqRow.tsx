@@ -6,10 +6,7 @@ import React from "react";
 export interface AqRowProps{
     children?:React.ReactNode[]|React.ReactNode
 }
-export function AqRow(props:AqRowProps)
+export function AqRow({children=null}:AqRowProps)
 {
-    return <div className={styles.aq_row}>{props.children}</div>
-}
-AqRow.defaultProps={
-    children:[]
+    return <div className={styles.aq_row}>{children}</div>
 }

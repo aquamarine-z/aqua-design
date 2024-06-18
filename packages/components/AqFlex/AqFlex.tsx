@@ -13,21 +13,20 @@ export interface AqFlexProps{
 /***
 
  ***/
-export function AqFlex(props:AqFlexProps){
+export function AqFlex({
+                           flexDirection = "row",
+                           justifyContent = "flex-start",
+                           alignItems = "flex-start",
+                           children = null
+                       }: AqFlexProps) {
     return <div style={{
         display: "flex",
-        flexDirection: props.flexDirection,
-        justifyContent: props.justifyContent,
-        alignItems: props.alignItems
+        flexDirection: flexDirection,
+        justifyContent: justifyContent,
+        alignItems: alignItems
     }}
                 className={styles.aq_flex}
     >
-        {props.children}
+        {children}
     </div>
-}
-AqFlex.defaultProps = {
-    flexDirection: "row",
-    justifyContent: "flex-start",
-    alignItems: "flex-start",
-    children: []
 }

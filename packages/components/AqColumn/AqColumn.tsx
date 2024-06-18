@@ -3,7 +3,7 @@ import React from "react";
 // @ts-expect-error
 import styles from "./AqColumn.module.less"
 export interface AqColumnProps{
-    children?: React.ReactNode[]|React.ReactNode,
+    children?: React.ReactNode[] | React.ReactNode | null,
 }
 /*
 * @description 布局为Flex的Column
@@ -16,7 +16,9 @@ export interface AqColumnProps{
 *   margin: 0;
 *   align-items: center;
 * */
-export function AqColumn(props:AqColumnProps)
+export function AqColumn({
+                             children = null
+                         }: AqColumnProps)
 {
-    return <div className={styles.aq_column}>{props.children}</div>
+    return <div className={styles.aq_column}>{children}</div>
 }

@@ -8,12 +8,4 @@ export interface AqFlexProps {
 /***
 
  ***/
-export declare function AqFlex(props: AqFlexProps): import("react/jsx-runtime").JSX.Element;
-export declare namespace AqFlex {
-    var defaultProps: {
-        flexDirection: string;
-        justifyContent: string;
-        alignItems: string;
-        children: never[];
-    };
-}
+export declare function AqFlex({ flexDirection, justifyContent, alignItems, children }: AqFlexProps): import("react/jsx-runtime").JSX.Element;
