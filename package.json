@@ -1,7 +1,7 @@
 {
   "name": "aqua-ui",
   "private": false,
-  "version": "1.0.20",
+  "version": "1.0.21",
   "type": "module",
   "files": [
     "lib"
@@ -53,7 +53,5 @@
     "vite-plugin-dts": "^3.9.1",
     "react-router-dom": "^6.23.1"
   },
-  "dependencies": {
-
-  }
+  "dependencies": {}
 }
