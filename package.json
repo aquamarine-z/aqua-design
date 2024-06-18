@@ -11,8 +11,9 @@
   "typings": "./lib/index.d.ts",
   "exports": {
     ".": {
-      "import": "./lib/aqua-ui.js",
+      "import": ["./lib/aqua-ui.js","./lib/style.css"],
       "require": "./lib/aqua-ui.umd.cjs",
+
       "types": "./lib/index.d.ts"
     }
   },
