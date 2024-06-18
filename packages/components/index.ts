@@ -8,5 +8,5 @@ export{
     AqColumn,
     AqRow,
     AqDraggable,
-    AqModalDialog
+    AqModalDialog,
 }
