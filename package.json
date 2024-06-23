@@ -56,6 +56,10 @@
     "tslib": "^2.6.3",
     "typescript": "^5.2.2",
     "vite": "^5.2.0",
-    "vite-plugin-dts": "^3.9.1"
+    "vite-plugin-dts": "^3.9.1",
+    "vite-plugin-style-import": "^2.0.0"
+  },
+  "dependencies": {
+    "consola": "^3.2.3"
   }
 }

@@ -11,3 +11,4 @@ import "./components/AqFlex/AqFlex.module.less";
 import "./components/AqModalDialog/AqModalDialog.module.less";
 import "./components/AqDraggable/AqDraggable.module.less";
 import "./themes/AqGlassTheme/AqGlassTheme.module.less";
+import "./style.css";

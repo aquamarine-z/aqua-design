@@ -3,12 +3,22 @@ import react from '@vitejs/plugin-react'
 
 import * as path from "node:path";
 import typescript from "@rollup/plugin-typescript";
+import * as styleImport from 'vite-plugin-style-import';
 // https://vitejs.dev/config/
 function resolve(str: string) {
     return path.resolve(__dirname, str);
 }
 export default defineConfig({
-    plugins: [react(),typescript({
+    plugins: [react(), styleImport.createStyleImportPlugin({
+        libs: [
+            {
+                libraryName: 'aqua-ui',
+                esModule: true,
+                resolveStyle: (name) => `./lib/${name}.css`,
+            },
+        ],
+    }),
+        typescript({
         target: 'es5',
         rootDir: resolve('packages/'),
         declaration: true,
