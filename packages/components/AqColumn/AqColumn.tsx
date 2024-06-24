@@ -3,6 +3,7 @@ import React from "react";
 import styled from "styled-components";
 export interface AqColumnProps{
     children?: React.ReactNode[] | React.ReactNode | null,
+    style?: React.CSSProperties
 }
 /*
 * @description 布局为Flex的Column
@@ -16,10 +17,11 @@ export interface AqColumnProps{
 *   align-items: center;
 * */
 export function AqColumn({
-                             children = null
+                             children = null,
+                             style = {}
                          }: AqColumnProps)
 {
-    return <AqColumnDiv>{children}</AqColumnDiv>
+    return <AqColumnDiv style={{...style}}>{children}</AqColumnDiv>
 }
 const AqColumnDiv=styled.div`
     display: flex;

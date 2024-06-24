@@ -6,7 +6,7 @@ export interface AqDraggableProps {
         left: number;
         top: number;
     };
-    style: React.CSSProperties | null;
+    style?: React.CSSProperties;
 }
 export declare function AqDraggable({ children, position, originalPosition, style, }: AqDraggableProps): import("react/jsx-runtime").JSX.Element;
 export declare namespace AqDraggable {

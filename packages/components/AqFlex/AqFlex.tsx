@@ -7,7 +7,8 @@ export interface AqFlexProps{
     children: React.ReactNode[]|React.ReactNode,
     flexDirection?: "row" | "column"
     justifyContent?: "flex-start" | "flex-end" | "center" | "space-between" | "space-around" | "space-evenly"
-    alignItems?: "flex-start" | "flex-end" | "center" | "stretch" | "baseline"
+    alignItems?: "flex-start" | "flex-end" | "center" | "stretch" | "baseline",
+    style: React.CSSProperties,
 }
 /***
 
@@ -16,13 +17,15 @@ export function AqFlex({
                            flexDirection = "row",
                            justifyContent = "flex-start",
                            alignItems = "flex-start",
-                           children = null
+                           children = null,
+                        style={}
                        }: AqFlexProps) {
     return <AqFlexDiv style={{
         display: "flex",
         flexDirection: flexDirection,
         justifyContent: justifyContent,
-        alignItems: alignItems
+        alignItems: alignItems,
+        ...style
     }}
     >
         {children}

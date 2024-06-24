@@ -4,8 +4,9 @@ export interface AqFlexProps {
     flexDirection?: "row" | "column";
     justifyContent?: "flex-start" | "flex-end" | "center" | "space-between" | "space-around" | "space-evenly";
     alignItems?: "flex-start" | "flex-end" | "center" | "stretch" | "baseline";
+    style: React.CSSProperties;
 }
 /***
 
  ***/
-export declare function AqFlex({ flexDirection, justifyContent, alignItems, children }: AqFlexProps): import("react/jsx-runtime").JSX.Element;
+export declare function AqFlex({ flexDirection, justifyContent, alignItems, children, style }: AqFlexProps): import("react/jsx-runtime").JSX.Element;

@@ -5,7 +5,7 @@ import styles from "./Glass.module.less"
 import AqDraggable from "../../../packages/components/AqDraggable";
 import AqColumn from "../../../packages/components/AqColumn";
 import {useEffect} from "react";
-import AqGlassTheme from "../../../packages/themes/AqGlassTheme";
+import AqGlassTheme from "../../../packages/themes/GlassTheme/AqGlassTheme";
 
 export function Glass() {
     useEffect(() => {

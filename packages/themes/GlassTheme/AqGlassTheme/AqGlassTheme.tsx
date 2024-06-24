@@ -3,7 +3,7 @@
 import React from "react";
 import styled from "styled-components"
 export interface AqGlassThemeProps {
-    children?: React.ReactNode|React.ReactNode[]
+    children?: React.ReactNode|React.ReactNode[],
 }
 
 

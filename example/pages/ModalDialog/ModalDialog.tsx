@@ -2,7 +2,7 @@
 // @ts-expect-error
 import styles from "./ModalDialog.module.less"
 import AqColumn from "../../../packages/components/AqColumn";
-import AqGlassTheme from "../../../packages/themes/AqGlassTheme";
+import AqGlassTheme from "../../../packages/themes/GlassTheme/AqGlassTheme";
 import {useState} from "react";
 import {AqModalDialog} from "../../../packages/components/AqModalDialog/AqModalDialog";
 

@@ -1,4 +1,4 @@
-import AqGlassTheme from "../../../packages/themes/AqGlassTheme";
+import AqGlassTheme from "../../../packages/themes/GlassTheme/AqGlassTheme";
 import AqDraggable from "../../../packages/components/AqDraggable";
 import AqColumn from "../../../packages/components/AqColumn";
 

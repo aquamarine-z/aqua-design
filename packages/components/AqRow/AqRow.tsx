@@ -1,16 +1,18 @@
 import React from "react";
 import styled from "styled-components";
 export interface AqRowProps{
-    children?:React.ReactNode[]|React.ReactNode
+    children?:React.ReactNode[]|React.ReactNode,
+    style?:React.CSSProperties
 }
-export function AqRow({children=null}:AqRowProps)
+export function AqRow({children=null,style={}}:AqRowProps)
 {
-    return <AqRowDiv>{children}</AqRowDiv>
+
+    return <AqRowDiv style={{...style}}>{children}</AqRowDiv>
 }
 const AqRowDiv=styled.div`
     display: flex;
-    width: 100%;
-    height: fit-content;
+    width: fit-content;
+    height: 100%;
     flex-direction: row;
     padding: 0;
     margin: 0;

@@ -10,7 +10,7 @@ export interface AqDraggableProps {
         left: number,
         top: number
     },
-    style:React.CSSProperties|null,
+    style?:React.CSSProperties,
 }
 
 export function AqDraggable({
@@ -25,96 +25,61 @@ export function AqDraggable({
     const [dragging, setDragging] = useState(false)
     const [startLeft, setStartLeft] = useState(0)
     const [startTop, setStartTop] = useState(0)
-
-    if (position === "fixed") {
-        const handleDragStart = (e: React.MouseEvent) => {
-            setDragging(true)
-            setStartLeft(e.pageX)
-            setStartTop(e.pageY)
-
+    let getPosition:(e:React.MouseEvent)=>([number,number])
+    if(position==="fixed"){
+        getPosition=(e:React.MouseEvent)=>{
+            return [e.clientX,e.clientY]
         }
-        const handleDragMove = (e: React.MouseEvent) => {
-            if (dragging) {
-                const nowLeft = e.pageX
-                const nowTop = e.pageY
-
-
-                setStartLeft(nowLeft)
-                setStartTop(nowTop)
-                setLeft(left + nowLeft - startLeft)
-                setTop(top + nowTop - startTop)
-
-            }
+    }else if(position==="absolute"){
+        getPosition=(e:React.MouseEvent)=>{
+            return [e.pageX, e.pageY]
         }
-        const handleDragEnd = () => {
-            setDragging(false)
-            setStartLeft(0)
-            setStartTop(0)
-        }
-
-        const handleDragLeave = () => {
-            handleDragEnd()
-        }
-
-        return (
-            <div style={
-                {
-                    ...style,
-                    position: "fixed",
-                    left: left + "px",
-                    top: top + "px"
-                }
-
-            }
-                 onMouseDown={handleDragStart} onMouseOut={handleDragLeave} onMouseMove={handleDragMove}
-                 onMouseUp={handleDragEnd} ref={divRef}>
-                {children}
-            </div>
-        )
-    } else {
-        const handleDragStart = (e: React.MouseEvent) => {
-            setDragging(true)
-            setStartLeft(e.clientX)
-            setStartTop(e.clientY)
-
-        }
-        const handleDragMove = (e: React.MouseEvent) => {
-            if (dragging) {
-                const nowLeft = e.clientX
-                const nowTop = e.clientY
-
-
-                setStartLeft(nowLeft)
-                setStartTop(nowTop)
-                setLeft(left + nowLeft - startLeft)
-                setTop(top + nowTop - startTop)
-
-            }
-        }
-        const handleDragEnd = () => {
-            setDragging(false)
-            setStartLeft(0)
-            setStartTop(0)
-        }
-
-        const handleDragLeave = () => {
-            handleDragEnd()
-        }
-
-        return (
-            <AqDraggableDiv style={
-                {
-                    ...style,
-                    position: "absolute",
-                    left: left + "px",
-                    top: top + "px"
-                }
-            } onMouseDown={handleDragStart} onMouseOut={handleDragLeave} onMouseMove={handleDragMove}
-                 onMouseUp={handleDragEnd} ref={divRef}>
-                {children}
-            </AqDraggableDiv>
-        )
     }
+    const handleDragStart = (e: React.MouseEvent) => {
+        setDragging(true)
+        const [x,y]=getPosition(e)
+        setStartLeft(x)
+        setStartTop(y)
+
+    }
+    const handleDragMove = (e: React.MouseEvent) => {
+        if (dragging) {
+            const [nowLeft,nowTop]=getPosition(e)
+            const setState=()=>{
+                setStartLeft(nowLeft)
+                setStartTop(nowTop)
+                setLeft(left + nowLeft - startLeft)
+                setTop(top + nowTop - startTop)
+            }
+            requestAnimationFrame(setState)
+
+        }
+    }
+    const handleDragEnd = () => {
+        setDragging(false)
+        setStartLeft(0)
+        setStartTop(0)
+    }
+
+    const handleDragLeave = () => {
+        handleDragEnd()
+    }
+
+    return (
+        <AqDraggableDiv style={
+            {
+                ...style,
+                position: position,
+                left: left + "px",
+                top: top + "px"
+            }
+
+        }
+             onMouseDown={handleDragStart} onMouseOut={handleDragLeave} onMouseMove={handleDragMove}
+             onMouseUp={handleDragEnd} ref={divRef}>
+            {children}
+        </AqDraggableDiv>
+    )
 }
 
 AqDraggable.defaultProps = {
