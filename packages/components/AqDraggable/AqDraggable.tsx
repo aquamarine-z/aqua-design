@@ -1,6 +1,7 @@
 
-import styles from "./AqDraggable.module.less"
+
 import React, {createRef, RefObject, useState} from "react";
+import styled from "styled-components";
 
 export interface AqDraggableProps {
     children: JSX.Element,
@@ -66,7 +67,7 @@ export function AqDraggable({
 
             }
                  onMouseDown={handleDragStart} onMouseOut={handleDragLeave} onMouseMove={handleDragMove}
-                 onMouseUp={handleDragEnd} className={styles.aq_draggable} ref={divRef}>
+                 onMouseUp={handleDragEnd} ref={divRef}>
                 {children}
             </div>
         )
@@ -101,7 +102,7 @@ export function AqDraggable({
         }
 
         return (
-            <div style={
+            <AqDraggableDiv style={
                 {
                     ...style,
                     position: "absolute",
@@ -109,9 +110,9 @@ export function AqDraggable({
                     top: top + "px"
                 }
             } onMouseDown={handleDragStart} onMouseOut={handleDragLeave} onMouseMove={handleDragMove}
-                 onMouseUp={handleDragEnd} className={styles.aq_draggable} ref={divRef}>
+                 onMouseUp={handleDragEnd} ref={divRef}>
                 {children}
-            </div>
+            </AqDraggableDiv>
         )
     }
 }
@@ -123,3 +124,9 @@ AqDraggable.defaultProps = {
     },
     style:null
 }
+const AqDraggableDiv=styled.div`
+    padding: 0;
+    margin: 0;
+    background-color: transparent !important;
+    transition: left 0s ,top 0s !important;
+`

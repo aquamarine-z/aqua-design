@@ -5,6 +5,11 @@ import styled from "styled-components"
 export interface AqGlassThemeProps {
     children?: React.ReactNode|React.ReactNode[]
 }
+
+
+export function AqGlassTheme({children}:AqGlassThemeProps){
+    return <AqGlassThemeDiv>{children}</AqGlassThemeDiv>
+}
 const AqGlassThemeDiv=styled.div`
     margin: 0;
     padding: 0;
@@ -85,7 +90,7 @@ const AqGlassThemeDiv=styled.div`
         color: #00000066;
         transition: all 0.25s ease-in-out;
         font-size: 16px;
-
+        
         &::placeholder {
             color: rgba(128, 128, 128, 0.6);
         }
@@ -153,7 +158,3 @@ const AqGlassThemeDiv=styled.div`
         }
     }
 `
-
-export function AqGlassTheme({children}:AqGlassThemeProps){
-    return <AqGlassThemeDiv>{children}</AqGlassThemeDiv>
-}

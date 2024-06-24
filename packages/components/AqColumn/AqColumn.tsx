@@ -1,6 +1,6 @@
 import React from "react";
 
-import styles from "./AqColumn.module.less"
+import styled from "styled-components";
 export interface AqColumnProps{
     children?: React.ReactNode[] | React.ReactNode | null,
 }
@@ -19,5 +19,19 @@ export function AqColumn({
                              children = null
                          }: AqColumnProps)
 {
-    return <div className={styles.aq_column}>{children}</div>
+    return <AqColumnDiv>{children}</AqColumnDiv>
 }
+const AqColumnDiv=styled.div`
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height:fit-content;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+    background:none !important;
+    border: none !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    backdrop-filter: none !important;
+  `
