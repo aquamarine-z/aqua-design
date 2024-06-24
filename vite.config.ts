@@ -12,7 +12,7 @@ export default defineConfig({
     plugins: [react(), styleImport.createStyleImportPlugin({
         libs: [
             {
-                libraryName: 'aqua-ui',
+                libraryName: 'aqua-design',
                 esModule: true,
                 resolveStyle: (name) => `./lib/${name}.css`,
             },
