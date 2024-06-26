@@ -6,15 +6,13 @@
   "files": [
     "lib"
   ],
-  "style": "./lib/style.css",
   "main": "./lib/aqua-design.umd.cjs",
   "module": "./lib/aqua-design.js.js",
   "typings": "./lib/index.d.ts",
   "exports": {
     ".": {
       "import": [
-        "./lib/aqua-design.js",
-        "./lib/style.css"
+        "./lib/aqua-design.js"
       ],
       "require": "./lib/aqua-design.umd.cjs",
       "types": "./lib/index.d.ts"

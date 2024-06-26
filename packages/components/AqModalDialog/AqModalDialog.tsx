@@ -27,8 +27,6 @@ export function AqModalDialog({visible=false,children=null}:AqModalDialogProps){
                         </div>
                     </AqDraggable>
                 </AqModalDialogDiv>
-
-
             </>
         )
     }
@@ -61,4 +59,4 @@ const AqModalDialogDiv=styled.div`
         backdrop-filter: none !important;
         background: transparent !important;
     }
-    `
+`

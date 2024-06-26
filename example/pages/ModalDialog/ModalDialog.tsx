@@ -1,5 +1,4 @@
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-expect-error
+
 import styles from "./ModalDialog.module.less"
 import AqColumn from "../../../packages/components/AqColumn";
 import AqGlassTheme from "../../../packages/themes/GlassTheme/AqGlassTheme";

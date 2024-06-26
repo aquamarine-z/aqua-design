@@ -1,5 +1,4 @@
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-expect-error
+
 import styles from "./Glass.module.less"
 
 import AqDraggable from "../../../packages/components/AqDraggable";

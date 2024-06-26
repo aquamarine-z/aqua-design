@@ -1,0 +1,66 @@
+div.background{
+    background:linear-gradient(to right, #9fffa5, #71bdf3);
+    z-index: -1;
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow:scroll;
+}
+div.menu_item_center{
+    height: 75px;
+    width: 75px;
+    border-radius: 50% !important;
+    transition: 0.25s all;
+    &:hover{
+        transform: scale(1.1);
+        cursor: pointer;
+    }
+    &:active{
+        transform: scale(0.9);
+    }
+    user-select: none;
+
+}
+div.menu_item{
+    height: 75px;
+    width: 75px;
+    border-radius: 50% !important;
+    transition: 0.25s all;
+    left: 0;
+    top: 0;
+    animation: fade-in 0.8s ease-in-out ;
+    @keyframes fade-in{
+        from{
+            opacity: 0;
+        }
+        to{
+            opacity: 1;
+        }
+    }
+    &:hover{
+        transform: scale(1.1);
+        cursor: pointer;
+    }
+    &:active{
+        transform: scale(0.9);
+    }
+    user-select: none;
+}
+div.menu_item_hide{
+    animation: fade-out 0.8s ease-in-out ;
+    @keyframes fade-out{
+        from{
+            opacity: 1;
+            display: block;
+
+        }
+        to{
+            opacity: 0;
+            display: block;
+        }
+    }
+}
